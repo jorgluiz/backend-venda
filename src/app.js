@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:3333', 'http://localhost:5173', 'https://211a-45-187-170-137.ngrok-free.app'],
+    origin: ['https://backend-venda.up.railway.app/users/register', 'http://localhost:5173'],
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
 
 // Aplicar CORS globalmente
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://211a-45-187-170-137.ngrok-free.app'],
+  origin: ['https://backend-venda.up.railway.app/users/register', 'http://localhost:5173'],
   methods: ['GET', 'POST'],
   credentials: true
 };
