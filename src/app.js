@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
-    origin: ['https://backend-venda.up.railway.app/users/register', 'http://localhost:5173'],
+    origin: ['https://backend-venda.up.railway.app', 'http://localhost:5173'],
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
 
 // Aplicar CORS globalmente
 const corsOptions = {
-  origin: ['https://backend-venda.up.railway.app/users/register', 'http://localhost:5173'],
+  origin: ['https://backend-venda.up.railway.app', 'http://localhost:5173'],
   methods: ['GET', 'POST'],
   credentials: true
 };
