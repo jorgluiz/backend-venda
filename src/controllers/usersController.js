@@ -13,6 +13,7 @@ const usersModel = require('../models/usersModel');
 const registerUser = async (req, res) => {
   try {
     let { name, email, password } = req.body;
+    console.log(name, email, password);
     if (!name || !email || !password) return res.status(400).send({ error: 'Missing required fields for registration' });
 
     // Converte o email para minúsculas
