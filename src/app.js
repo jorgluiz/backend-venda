@@ -14,7 +14,8 @@ const io = new Server(server, {
   cors: {
     origin: ['https://backend-venda.up.railway.app', 'http://localhost:5173', 'https://frontend-venda.up.railway.app/'],
     methods: ['GET', 'POST'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: 'Content-Type,Authorization'
   }
 });
 
@@ -26,7 +27,8 @@ app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
 const corsOptions = {
   origin: ['https://backend-venda.up.railway.app', 'http://localhost:5173', 'https://frontend-venda.up.railway.app/'],
   methods: ['GET', 'POST'],
-  credentials: true
+  credentials: true,
+  allowedHeaders: 'Content-Type,Authorization'
 };
 app.use(cors(corsOptions));
 
