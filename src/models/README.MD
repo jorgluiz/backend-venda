@@ -6,7 +6,7 @@
 
 # Uso típico: É mais comum em INSERT, UPDATE, e DELETE, onde os dados do usuário podem variar. No seu caso, você está utilizando db.execute na função createUser porque os valores de name, email, e password são inseridos dinamicamente.
 
-2. db.query
+2. db.query 
 
 # Execução simples de consultas: db.query é mais usado para consultas simples que não precisam de preparação especial, como consultas SELECT. Ele executa a consulta diretamente sem qualquer processo de preparação no banco de dados.
 
