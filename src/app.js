@@ -13,7 +13,7 @@ const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
     origin: ['https://backend-venda.up.railway.app', 'http://localhost:5173', 'https://frontend-venda.up.railway.app'],
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'OPTIONS'],
     credentials: true,
     allowedHeaders: 'Content-Type,Authorization'
   }
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
 // Aplicar CORS globalmente
 const corsOptions = {
   origin: ['https://backend-venda.up.railway.app', 'http://localhost:5173', 'https://frontend-venda.up.railway.app'],
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true,
   allowedHeaders: 'Content-Type,Authorization'
 };
